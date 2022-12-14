@@ -4,6 +4,8 @@
 # ./test
 # ./test -v
 #
+#test commit
+#
 #
 # Run specified test pass
 #
