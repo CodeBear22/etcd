@@ -2,7 +2,7 @@ name: functional-tests-arm
 on: [push, pull_request]
 jobs:
   test:
-    runs-on: self-hosted
+    runs-on: [self-hosted, linux, ARM64]
     steps:
       - uses: actions/checkout@v2
       - name: install dependencies
