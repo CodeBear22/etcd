@@ -4,7 +4,7 @@ jobs:
   test:
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: install dependencies
         run: |
           sudo apt install -y git gcc
