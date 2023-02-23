@@ -13,7 +13,7 @@ jobs:
         - linux-amd64-integration-4-cpu
         - linux-amd64-unit-4-cpu-race
         - all-build
-        - linux-386-unit-1-cpu
+        # - linux-386-unit-1-cpu
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-go@v3

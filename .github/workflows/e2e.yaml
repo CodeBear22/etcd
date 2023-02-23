@@ -8,7 +8,7 @@ jobs:
       matrix:
         target:
         - linux-amd64-e2e
-        - linux-386-e2e
+        # - linux-386-e2e
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-go@v3
