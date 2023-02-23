@@ -10,12 +10,11 @@ jobs:
           sudo apt install -y git gcc
       - uses: actions/setup-go@v3
         with:
-          go-version: "1.16.15"
+          go-version: "1.18.3"
       - run: go version
       - run: date
       - name: Run tests
         run: |
-          GOARCH=arm64 PASSES='fmt bom dep' ./test.sh
           GOARCH=arm64 CPU=1 PASSES='integration' RACE='false' ./test.sh
           GOARCH=arm64 CPU=2 PASSES='integration' RACE='false' ./test.sh
           GOARCH=arm64 CPU=4 PASSES='integration' RACE='false' ./test.sh
