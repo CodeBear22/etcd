@@ -15,6 +15,7 @@ jobs:
       - run: date
       - name: Run tests
         run: |
+          GOARCH=amd64 PASSES='fmt bom dep' ./test.sh
           GOARCH=arm64 CPU=1 PASSES='integration' RACE='false' ./test.sh
           GOARCH=arm64 CPU=2 PASSES='integration' RACE='false' ./test.sh
           GOARCH=arm64 CPU=4 PASSES='integration' RACE='false' ./test.sh
