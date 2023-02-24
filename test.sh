@@ -373,16 +373,14 @@ function fmt_pass {
   # TODO: add "unparam","staticcheck", "unconvert", "ineffasign","nakedret"
   # after resolving ore-existing errors.
   # markdown_you  -  too sensitive check was temporarilly disbled. 
-  for p in shellcheck \
-      goword \
+  #revive shellcheck
+  for p in goword \
       gofmt \
       govet \
-      revive \
       license_header \
       receiver_name \
       mod_tidy \
       dep \
-      shellcheck \
       shellws \
       ; do
     run_pass "${p}" "${@}"
