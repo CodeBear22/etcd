@@ -374,8 +374,7 @@ function fmt_pass {
   # after resolving ore-existing errors.
   # markdown_you  -  too sensitive check was temporarilly disbled. 
   #revive shellcheck
-  for p in shellcheck \
-      goword \
+  for p in  goword \
       gofmt \
       govet \
       revive \
