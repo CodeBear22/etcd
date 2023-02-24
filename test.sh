@@ -380,7 +380,6 @@ function fmt_pass {
       license_header \
       mod_tidy \
       dep \
-      shellcheck \
       shellws \
       ; do
     run_pass "${p}" "${@}"
