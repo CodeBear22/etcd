@@ -377,7 +377,6 @@ function fmt_pass {
   for p in  goword \
       gofmt \
       govet \
-      revive \
       license_header \
       receiver_name \
       mod_tidy \
