@@ -379,6 +379,7 @@ function fmt_pass {
       gofmt \
       govet \
       license_header \
+      receiver_name \
       mod_tidy \
       dep \
       shellws \
