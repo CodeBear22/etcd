@@ -375,6 +375,7 @@ function fmt_pass {
   # markdown_you  -  too sensitive check was temporarilly disbled. 
   #revive shellcheck
   for p in  goword \
+      shellcheck \
       gofmt \
       govet \
       license_header \
