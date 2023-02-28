@@ -372,12 +372,11 @@ function fmt_pass {
   # TODO: add "unparam","staticcheck", "unconvert", "ineffasign","nakedret"
   # after resolving ore-existing errors.
   # markdown_you  -  too sensitive check was temporarilly disbled. 
-  # shellcheck gofmt
+  # shellcheck gofmt receiver_name
   for p in goword \
       govet \
       revive \
       license_header \
-      receiver_name \
       mod_tidy \
       dep \
       shellws \
