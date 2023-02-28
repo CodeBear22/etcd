@@ -380,7 +380,6 @@ function fmt_pass {
       receiver_name \
       mod_tidy \
       dep \
-      # shellcheck \
       shellws \
       ; do
     run_pass "${p}" "${@}"
