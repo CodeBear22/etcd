@@ -1,0 +1,16 @@
+name: E2E-arm
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: "1.16.15"
+      - run: go version
+      - run: date
+      - name: Run e2e
+        run: |
+          GOARCH=arm64 PASSES='build e2e' CPU='4' EXPECT_DEBUG='true' COVER='false' RACE='true' ./test.sh 2>&1 | tee test.log
+          ! egrep "(--- FAIL:|DATA RACE|panic: test timed out|appears to have leaked)" -B50 -A10 test.log
