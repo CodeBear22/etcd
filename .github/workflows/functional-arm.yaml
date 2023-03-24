@@ -15,8 +15,4 @@ jobs:
       - run: date
       - name: Run functional
         run: |
-          GO_BUILD_FLAGS='-v -mod=readonly' GOARCH=arm64  ./build && GOARCH=arm64 PASSES='functional' ./test
-
-
-
-          https://go.dev/dl/go1.20.2.linux-amd64.tar.gz
+          GO_BUILD_FLAGS='-v -mod=readonly' GOARCH=arm64  ./build && GOARCH=arm64 PASSES='functional' ./test.sh
