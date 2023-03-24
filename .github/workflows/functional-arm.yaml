@@ -10,7 +10,7 @@ jobs:
           sudo apt install -y git gcc
       - uses: actions/setup-go@v2
         with:
-          go-version: "^1.18"
+          go-version: "1.15.10"
       - run: go version
       - run: date
       - name: Run functional
