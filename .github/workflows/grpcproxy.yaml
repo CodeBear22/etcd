@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-go@v2
       with:
-        go-version: "^1.16"
+        go-version: "^1.18"
     - run: date
     - env:
         TARGET: ${{ matrix.target }}
@@ -28,3 +28,18 @@ jobs:
             exit 1
             ;;
         esac
+
+
+
+
+  for p in shellcheck \
+      goword \
+      gofmt \
+      govet \
+      revive \
+      license_header \
+      receiver_name \
+      mod_tidy \
+      dep \
+      shellcheck \
+         \
